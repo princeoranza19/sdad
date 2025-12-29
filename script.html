@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Romantic Night Anniversary 💕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:'Times New Roman', serif;
+}
+
+body{
+  margin:0;
+  background: linear-gradient(to bottom, #0d0d2b, #1a1a40); /* night sky gradient */
+  color:#f0e6f6;
+  overflow-x:hidden;
+}
+
+/* INTRO */
+.intro{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.envelope{
+  background: radial-gradient(circle at top left, #2b1a3f, #1a0d2b);
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.7);
+  text-align:center;
+  color:#ffd6f0;
+}
+
+button{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#ff6fcf;   /* warm romantic pink */
+  color:#1a0d2b;
+  font-size:1.1em;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(255,111,207,0.5);
+}
+button:hover{
+  background:#ff85d1;
+}
+
+/* CONTENT */
+.content{
+  display:none;
+  padding:40px 15px;
+}
+
+.section{
+  margin-bottom:80px;
+  text-align:center;
+}
+
+/* ---------- SLIDER ---------- */
+.slider {
+  width: 300px; /* Mas maganda kung fixed width para sa portrait photos */
+  max-width: 90%; 
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  background: rgba(255,255,255,0.05);
+}
+.slides{
+  display:flex;
+  transition:transform 0.6s ease;
+}
+
+.slides img {
+  width: 100%; 
+  height: 365px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255,111,207,0.4);
+  border: 2px solid rgba(255,111,207,0.3);
+}
+
+/* ---------- 3D CAROUSEL ---------- */
+.carousel3d{
+  position:relative;
+  width:280px;
+  height:360px;
+  margin:0 auto;
+  perspective:1000px;
+}
+
+.carousel3d .ring{
+  width:100%;
+  height:100%;
+  position:absolute;
+  transform-style:preserve-3d;
+  animation:spin 16s infinite linear;
+}
+
+.carousel3d img{
+  position:absolute;
+  width:180px;
+  height:220px;
+  left:50px;
+  top:50px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(255,111,207,0.5);
+  border:1px solid rgba(255,111,207,0.3);
+}
+
+@keyframes spin{
+  from{transform:rotateY(0deg);}
+  to{transform:rotateY(360deg);}
+}
+
+/* ---------- LETTER ---------- */
+.letter{
+  background: radial-gradient(circle at top, #2b1a3f, #1a0d2b);
+  padding:30px;
+  max-width:750px;
+  margin:0 auto;
+  border-radius:20px;
+  box-shadow:0 15px 25px rgba(255,111,207,0.3);
+  color:#ffd6f0;
+}
+
+#typewriter{
+  white-space:pre-wrap;
+  line-height:1.7;
+}
+
+/* ---------- HEARTS ---------- */
+.heart{
+  position:fixed;
+  bottom:-10px;
+  font-size:20px;
+  color:rgba(255,111,207,0.8);
+  animation:floatUp linear infinite;
+  z-index:999;
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0);opacity:1;}
+  to{transform:translateY(-100vh);opacity:0;}
+}
+
+/* HEADINGS */
+h2{
+  color:#ffb3de;
+  text-shadow: 0 0 10px rgba(255,111,207,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- INTRO -->
+<div class="intro" id="intro">
+  <div class="envelope">
+    <h1>Hi Lovie 💕</h1>
+    <p>Welcome to my website. Enjoyyyy mwaaa</p>
+    <button onclick="openLetter()">Click Me 💌</button>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="content">
+
+  <!-- 1ST ANNIV (3D) -->
+  <div class="section">
+    <h2>🌸 Our 1st Anniversary Memories</h2>
+    <div class="carousel3d">
+  <div class="ring">
+    <img src="2.7.jpg" style="transform:rotateY(0deg) translateZ(380px)">
+    <img src="1.2.jpg" style="transform:rotateY(45deg) translateZ(380px)">
+    <img src="1.4.jpg" style="transform:rotateY(90deg) translateZ(380px)">
+    <img src="1.3.jpg" style="transform:rotateY(135deg) translateZ(380px)">
+    <img src="2.8.jpg" style="transform:rotateY(180deg) translateZ(380px)">
+    <img src="1.5.jpg" style="transform:rotateY(225deg) translateZ(380px)">
+    <img src="1.6.jpg" style="transform:rotateY(270deg) translateZ(380px)">
+    <img src="2.9.jpg" style="transform:rotateY(315deg) translateZ(380px)">
+  </div>
+</div>
+</div>
+
+
+  <!-- 2ND ANNIV (SLIDER) -->
+  <div class="section">
+    <h2>💞 Our 2nd Anniversary Memories</h2>
+    <div class="slider" data-slider>
+      <div class="slides">
+        <img src="2nd 1.jpg">
+        <img src="2.3.jpg">
+        <img src="2.2.jpg">
+        <img src="2.4.jpg">
+        <img src="1.7.jpg">
+        <img src="2.5.jpg">
+        <img src="2.6.jpg">
+         <img src="1.8.jpg">
+      </div>
+    </div>
+  </div>
+
+  <!-- 3RD ANNIV (SLIDER) -->
+  <div class="section">
+    <h2>💗 Our 3rd Anniversary Memories</h2>
+    <div class="slider" data-slider>
+      <div class="slides">
+        <img src="3rd 1.jpg">
+        <img src="3.3.jpg">
+        <img src="3.2.jpg">
+          <img src="3.8.jpg">
+            <img src="3.4.jpg">
+              <img src="3.5.jpg">
+                <img src="3.9.jpg">
+    </div>
+  </div>
+  </div>
+
+  <!-- 4TH ANNIV (3D) -->
+  <div class="section">
+    <h2>💖 Our 4th Anniversary Memories</h2>
+    <div class="carousel3d">
+  <div class="ring">
+    <img src="4th 1.jpg" style="transform:rotateY(0deg) translateZ(380px)">
+    <img src="4.2.jpg" style="transform:rotateY(36deg) translateZ(380px)">
+    <img src="4.3.jpg" style="transform:rotateY(72deg) translateZ(380px)">
+    <img src="4.4.jpg" style="transform:rotateY(108deg) translateZ(380px)">
+    <img src="4.5.jpg" style="transform:rotateY(144deg) translateZ(380px)">
+    <img src="4.6.jpg" style="transform:rotateY(180deg) translateZ(380px)">
+    <img src="4.7.jpg" style="transform:rotateY(216deg) translateZ(380px)">
+    <img src="4.8.jpg" style="transform:rotateY(252deg) translateZ(380px)">
+    <img src="4.9.jpg" style="transform:rotateY(288deg) translateZ(380px)">
+    <img src="4.10.jpg" style="transform:rotateY(324deg) translateZ(380px)">
+  </div>
+</div>
+</div>
+
+
+  <!-- LETTER -->
+  <div class="letter">
+    <h2>💌 A Letter for You,  My Love</h2>
+    <p id="typewriter"></p>
+  </div>
+
+</div>
+
+<script>
+function openLetter(){
+  intro.style.display="none";
+  content.style.display="block";
+  bgMusic.play();
+  startTyping();
+  initSliders();
+  setInterval(createHeart,400);
+}
+
+/* TYPEWRITER */
+const text=`My gorgeous baby girl 💕💕,
+
+Happy anniversary to us, my loveeee. I honestly didn't expect we'd still be celebrating an anniversary after 
+everything that happened between us. Back then, kahit nasaktan mo ako, kahit pinaiyak mo ako, mahal na mahal
+na mahal parin kita. Never nawala yung love ko para sayo kahit kakaunti wala.
+
+This year has been full of challenges, problems, at ups and downs. Pero sa kabila ng lahat, we still chose
+each other. And from those challenges, we've learned and grown. Now, alam na natin kung paano harapin, at
+mas malakas an ang loob natin ngayon.
+
+I've realize so many things this year, things I wish i had done sooner. I'm so sorry, my love. No more drama
+na nga. I just want to thank god for giving me such a so so so gorgeous, mabait (pagtulog hehe), caring, 
+loving, and sweet partner. Thank you lord, for still choosing us for each other. Everything that happened this
+year was part of your plan, to test us, to strengthen us, and I'm so so grateful.
+
+Thank you for all the love, the memories, and the beautiful moments we've shared. I promise to stay through
+ups and downs, to love you more every single day, and to always choose you no matter what.
+
+I LOVE YOUUUU SO SO SO SO SO MUCHHHHHH, MY LOVEEEE. HAPPY ANNIVERSARYYYY!!!! 💕💕💕
+
+
+Forever yours,
+Gwapo mong bf 💕`;
+
+let i=0;
+function startTyping(){
+  if(i<text.length){
+    typewriter.innerHTML+=text.charAt(i++);
+    setTimeout(startTyping,40);
+  }
+}
+
+/* SLIDERS */
+function initSliders(){
+  document.querySelectorAll('[data-slider]').forEach(slider=>{
+    const slides=slider.querySelector('.slides');
+    const imgs=slides.children;
+    let index=0;
+    setInterval(()=>{
+      index=(index+1)%imgs.length;
+      slides.style.transform=`translateX(-${index*100}%)`;
+    },3000);
+  });
+}
+
+/* HEARTS */
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💗";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+}
+</script>
+
+</body>
+</html>
